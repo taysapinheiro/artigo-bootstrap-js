@@ -52,10 +52,8 @@
                         <li>documentação super acessível e legível</li>
                         <li>responsividade</li>
                         <li>comunidade ativa</li>
-                        <li> biblioteca de componentes, entre outros</li>
+                        <li> biblioteca de componentes, entre outros.</li>
                      </ul>
-                     Falando em fama, uma das linguagens de programação que vem ganhando bastante espaço nas aplicações web é Javascript.  
-                     Não seria em vão que o Bootstrap utilizaria funções dessa linguagem em seus códigos.                     
                   </div>
                </div>
             </div>
@@ -69,9 +67,19 @@
                </div>
                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
-                     Se ficou tentado a conhecer mais sobre a junção de Bootstrap + Javascript, mostrarei como utilizá-los em seu projeto e de alguns componentes do Javascript que estão no framework.  
+                     Falando em fama, uma das linguagens de programação que vem ganhando bastante espaço nas aplicações web é Javascript.  
+                     Não é em vão que o Bootstrap utiliza vários pluggins em Javascript(jQuery) em seus códigos.
+                     <p> Os pluggins do Bootstrap são ativados e configurados através do HTML, utilizando atributos <strong>data</strong>. Usando o código a seguir, você desativa a funcionalidade da API do atributo data:</p>
+                     <section class="exemplos">
+                        $(document).off('.data-api')
+                     </section>
+                     <p>Para desativar um pluggin específico, use o <i>namespace</i> do pluggin e em seguida  o <i>namespace</i> <strong>data-api</strong>, dessa maneira:</p>
+                     <section class="exemplos">
+                        $(document).off('.alert.data-api')
+                     </section>
+                     Se ficou tentado a conhecer mais sobre a junção de Bootstrap + Javascript, mostrarei como utilizá-los em seu projeto e alguns componentes do Javascript que estão no framework.  
                      Para fazer uso do JS compilado em seu projeto, basta apenas utilizar o  <a href="https://www.bootstrapcdn.com/">BootstrapCND</a>  antes do fechamento da tag body. 
-                     Logo abaixo, segue uma lista de alguns componentes dependentes do Javascript e seguida falarei um pouco sobre cada um, utilizando códigos de exemplos.
+                     <p>Logo abaixo, segue uma lista de alguns componentes dependentes do Javascript e seguida falarei um pouco sobre cada um, utilizando códigos de exemplos.</p>
                   </div>
                   <div class="dropdown">
                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -200,41 +208,41 @@
                            O modal cria notificações de diálogos no site e outros conteúdos personalizados.
                            <!-- Botão para acionar modal -->
                            <section class="elementos">
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-                           Abrir modal
-                           </button>
-                           <!-- Modal -->
-                           <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                       <span aria-hidden="true">&times;</span>
-                                       </button>
-                                    </div>
-                                    <div class="modal-body">
-                                       Que modal lindo!
-                                    </div>
-                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                       <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+                              Abrir modal
+                              </button>
+                              <!-- Modal -->
+                              <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                       </div>
+                                       <div class="modal-body">
+                                          Que modal lindo!
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
-                           </div>
-                        </section>
-                        <h5>Comportamento em JavaScript</h5>
-                        <section class="exemplos">
-                           <p>$('#meuModal').modal({
-                                keyboard: false
-                              }) - Define conteúdo como modal.
-                            </p>
-                           <p>$('#meuModal').modal('toggle')	- Alterna manualmente a visibilidade do modal</p>
-                           <p>$('#meuModal').modal('hide') - Esconde o modal manualmente</p>
-                           <p>$('#meuModal').modal('handleUpdate') - Se a altura do modal for alterada, reajusta manualmente.</p>
-                           <p>.modal('dispose') - Destrói o modal de um elemento</p>
-                        </section>
+                           </section>
+                           <h5>Comportamento em JavaScript</h5>
+                           <section class="exemplos">
+                              <p>$('#meuModal').modal({
+                                 keyboard: false
+                                 }) - Define conteúdo como modal.
+                              </p>
+                              <p>$('#meuModal').modal('toggle')	- Alterna manualmente a visibilidade do modal</p>
+                              <p>$('#meuModal').modal('hide') - Esconde o modal manualmente</p>
+                              <p>$('#meuModal').modal('handleUpdate') - Se a altura do modal for alterada, reajusta manualmente.</p>
+                              <p>.modal('dispose') - Destrói o modal de um elemento</p>
+                           </section>
                         </li>
                      </ul>
                   </div>
