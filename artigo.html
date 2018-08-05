@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Artigo</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+      <script src="main.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Hidden brand</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+               </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+         </div>
+      </nav>
+      <div class="container">
+         <img src="img/bs.png" alt="">
+         <img src="img/js3.png" alt="">
+         <div id="accordion">
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                     Um pouco sobre a história do Bootstrap
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                     Criado em agosto de 2011, o Bootstrap é considerado o melhor framework front-end do mundo. 
+                     As principais características que alimentam sua fama são: 
+                     <ul>
+                        <li>documentação super acessível e legível</li>
+                        <li>responsividade</li>
+                        <li>comunidade ativa</li>
+                        <li> biblioteca de componentes, entre outros</li>
+                     </ul>
+                     Falando em fama, uma das linguagens de programação que vem ganhando bastante espaço nas aplicações web é Javascript.  
+                     Não seria em vão que o Bootstrap utilizaria funções dessa linguagem em seus códigos.                     
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Usando Bootstrap e Javascript
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                     Se ficou tentado a conhecer mais sobre a junção de Bootstrap + Javascript, mostrarei como utilizá-los em seu projeto e de alguns componentes do Javascript que estão no framework.  
+                     Para fazer uso do JS compilado em seu projeto, basta apenas utilizar o  <a href="https://www.bootstrapcdn.com/">BootstrapCND</a>  antes do fechamento da tag body. 
+                     Logo abaixo, segue uma lista de alguns componentes dependentes do Javascript e seguida falarei um pouco sobre cada um, utilizando códigos de exemplos.
+                  </div>
+                  <div class="dropdown">
+                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Exibir componentes
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Botões de dispensar alertas</a>
+                        <a class="dropdown-item" href="#">Botões para alternar estados e funcionalidades dos botões checkboxes e radios</a>
+                        <a class="dropdown-item" href="#">Comportamento de deslize, controles e indicadores do Carousel</a>
+                        <a class="dropdown-item" href="#">Colapso para alternar visibilidade de conteúdo</a>
+                        <a class="dropdown-item" href="#">Apresentação e posicionamento de dropdowns</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                     Componentes e exemplos
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                     <!--ALERTA-->
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <h4>Alerta</h4>
+                           O ‘alerta’ é um componente que apresenta uma mensagem de forma que chame a atenção do usuário.
+                           <div class="alert alert-warning alert-dismissible fade show elementos" role="alert">
+                              Olha que alerta supimpa!
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                           </div>
+                           <h5>Comportamento em JavaScript</h5>
+                           <section class="exemplos">
+                              <p>$('.alert').alert() - O alerta fica esperando um evento de click nos elemetos que possuem atributo <strong>data-dismiss="alert"</strong></p>
+                              <p>$().alert('close') - Fecha o alerta e o remove do DOM.</p>
+                              <p>$().alert('dispose') - Destrói o alerta de um elemento</p>
+                           </section>
+                        </li>
+                     </ul>
+                     <!--BOTÕES-->
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <h4>Botões</h4>
+                           Os 'botões' são elementos de ações para formulários, diálogos e etc.
+                           <section class="elementos"><button type="button" class="btn btn-primary">Primary</button>
+                              <button type="button" class="btn btn-secondary">Secondary</button>
+                              <button type="button" class="btn btn-success">Success</button>
+                              <button type="button" class="btn btn-danger">Danger</button>
+                              <button type="button" class="btn btn-warning">Warning</button>
+                              <button type="button" class="btn btn-info">Info</button>
+                              <button type="button" class="btn btn-light">Light</button>
+                              <button type="button" class="btn btn-dark">Dark</button>
+                              <button type="button" class="btn btn-link">Link</button>
+                           </section>
+                           <h5>Comportamento em JavaScript</h5>
+                           <section class="exemplos">
+                              <p>$().button('toggle') - Deixa o botão com aparência de desativado</p>
+                              <p>$().button('dispose') - Destroi o botão de um elemento</p>
+                           </section>
+                        </li>
+                     </ul>
+                     <!--COLLAPSE-->
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <h4>Collapse</h4>
+                           É um pluggin Javascript, utilizado para esconder e mostrar conteúdo
+                           <section class="elementos">
+                              <p>
+                                 <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                 Link com href
+                                 </a>
+                                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                 Botão com data-target
+                                 </button>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                 <div class="card card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                 </div>
+                              </div>
+                           </section>
+                           <h5>Comportamento em JavaScript</h5>
+                           <section class="exemplos">
+                              <p>$('.collapse').collapse() - Ativa manualmente</p>
+                              <p>$('#myCollapsible').collapse({
+                                 toggle: false
+                                 }) - Ativa o conteúdo como se ele fosse um elemento 'colapsável'
+                              </p>
+                           </section>
+                        </li>
+                     </ul>
+                     <!--DROPDOWNS-->
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <h4>Dropdown</h4>
+                           Feito em cima da biblioteca do Popper.js, o dropdown é um botão que expande uma lista de link e outras coisas.
+                           <section class="elementos">
+                              <div class="dropdown">
+                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Botão dropdown
+                                 </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Alguma ação</a>
+                                    <a class="dropdown-item" href="#">Outra ação</a>
+                                    <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                                 </div>
+                              </div>
+                           </section>
+                           <h5>Comportamento em JavaScript</h5>
+                           <section class="exemplos">
+                              <p>$('.dropdown-toggle').dropdown() - Ativa o dropdown</p>
+                              <p>$().dropdown('update')	- Atualiza a posição do dropdown de um elemento</p>
+                              <p>$().dropdown('dispose') - detroi o dropdown de um elemento</p>
+                           </section>
+                        </li>
+                     </ul>
+                     <!--MODAL-->
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <h4>Modal</h4>
+                           O modal cria notificações de diálogos no site e outros conteúdos personalizados.
+                           <!-- Botão para acionar modal -->
+                           <section class="elementos">
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+                           Abrir modal
+                           </button>
+                           <!-- Modal -->
+                           <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                       <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                       <span aria-hidden="true">&times;</span>
+                                       </button>
+                                    </div>
+                                    <div class="modal-body">
+                                       Que modal lindo!
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                       <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <h5>Comportamento em JavaScript</h5>
+                        <section class="exemplos">
+                           <p>$('#meuModal').modal({
+                                keyboard: false
+                              }) - Define conteúdo como modal.
+                            </p>
+                           <p>$('#meuModal').modal('toggle')	- Alterna manualmente a visibilidade do modal</p>
+                           <p>$('#meuModal').modal('hide') - Esconde o modal manualmente</p>
+                           <p>$('#meuModal').modal('handleUpdate') - Se a altura do modal for alterada, reajusta manualmente.</p>
+                           <p>.modal('dispose') - Destrói o modal de um elemento</p>
+                        </section>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+</html>
